@@ -1,1 +1,64 @@
-<p>romb works!</p>
+<div class="rombForm p-3">
+    <h2>A rombusz adatai</h2>
+    <div class="mt-3">
+        <input 
+            type="text"
+            placeholder="A oldal (cm)"
+            [formControl]="aside"
+            class="form-control"
+        >
+    </div>
+    <div class="mt-3">
+        <input 
+            type="text"
+            placeholder="Alfa szög (°)"
+            [formControl]="alpha"
+            class="form-control"
+            (keyup)="onKeyUp($event)"
+        >
+    </div>
+
+    <div class="mt-3 justify-content-center row">
+        <div class="col-6">
+            <input
+                type="submit"
+                name=""
+                id=""
+                class="btn btn-primary w-100"
+                (click)="eventHandler()">
+        </div>
+
+        <div class="col-6">
+            <input
+                *ngIf="resetVisible"
+                type="reset"
+                class="btn btn-secondary w-100"
+                (click)="reset()">
+        </div>
+    </div>
+
+    <!-- results -->
+
+    <div class="mt-3" *ngIf="resultVisible">
+        <h3>Eredmény</h3>
+        <div class="mt-3">
+        
+            <input
+                type="text"
+                readonly
+                placeholder="Kerület (cm)"
+                [formControl]="perimeter"
+                class="form-control"
+            >
+        </div>
+        <div class="mt-3">
+            <input
+                type="text"
+                readonly
+                placeholder="Terület (cm^2)"
+                [formControl]="area"
+                class="form-control"
+            >
+        </div>
+    </div>
+</div>
