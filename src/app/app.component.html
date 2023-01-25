@@ -1,5 +1,24 @@
-<div class="container">
-  <app-romb>
+<div>
+  <ul class="nav justify-content-end col">
+    <li class="nav-item bg-dark m-1 rounded col-2 text-center">
+      <a class="nav-link active" aria-current="page" href="/">Rombusz</a>
+    </li>
   
-  </app-romb>
+    <li class="nav-item bg-dark m-1 rounded col-2 text-center">
+      <a class="nav-link" href="/info">Info</a>
+    </li>
+  
+    <li class="nav-item bg-dark m-1 rounded">
+      <a class="nav-link" target="_blank" href="https://github.com/csengekulker">
+        <i class="bi bi-github"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div class="container">
+  
+  <router-outlet></router-outlet>
+
+  <!-- <app-romb></app-romb> -->
 </div>
